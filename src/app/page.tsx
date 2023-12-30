@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import logoImg from "../assets/logo.png"
 import { ArrowUpRightFromCircle, Building, Github, Users } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
               <div className="flex justify-between mb-2">
                 <h1 className="text-base-title text-2xl font-semibold">Rodrigo Grzegorczyk</h1>
                 <span className="uppercase text-blue flex items-center gap-2">
-                  <strong className="text-sm">github</strong>
+                  <Link href="" className="text-sm">github</Link>
                   <ArrowUpRightFromCircle className="w-3 h-3" />
                 </span>
               </div>
@@ -52,7 +53,19 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <div className="flex flex-col mt-[72px]">
+          <div className="flex justify-between items-center mb-3">
+            <h2 className="text-base-subtitle font-bold">Publicações</h2>
+            <span className="text-base-span text-sm">6 publicações</span>
+          </div>
+          <input
+            className="py-4 px-3 rounded-md bg-base-input outline-none border border-base-border text-base-label placeholder:text-base-label focus:ring-1 focus:ring-base-label focus:ring-offset-2 focus:ring-offset-base-label"
+            placeholder="Buscar conteúdo"
+          />
+        </div>
       </div>
+      
     </main>
   )
 }
